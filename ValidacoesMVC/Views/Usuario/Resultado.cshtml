@@ -1,0 +1,62 @@
+﻿@model ValidacoesMVC.Models.Usuario
+
+@{
+    ViewBag.Title = "Resultado Usuários";
+}
+
+<h2>Listando Dados do Usuário</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Usuário Cadastrado</legend>
+        <div class="editor-label">
+            @Html.Label("Nome")
+        </div>
+
+        <div class="editor-field">
+            @Html.DisplayFor(m => m.nome)       
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Observação")
+        </div>
+
+        <div class="editor-field">
+            @Html.DisplayFor(m => m.observacao)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Idade")
+        </div>
+
+        <div class="editor-field">
+            @Html.DisplayFor(m => m.idade)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("E-mail")
+        </div>
+
+        <div class="editor-field">
+            @Html.DisplayFor(m => m.email)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Login")
+        </div>
+
+        <div class="editor-field">
+            @Html.DisplayFor(m => m.login)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Senha")
+        </div>
+
+        <div class="editor-field">
+            @Html.DisplayFor(m => m.senha)
+        </div>
+        <p>@Html.ActionLink("Voltar","Usuario")</p>
+        </fieldset>
+}
